@@ -1,0 +1,23 @@
+/**
+ * THIS IS CUSTOM BOX-SHADOW CREATED ON 'LAYER' MODEL
+ * @type {Boolean} $apply - it will work only if $apply is true
+ */
+/**
+ * THIS SETS 'LINE-HEIGHT' OF THE 'ELEMENT' AND ADDS 'BOTTOM-PADDING'
+ * @type {Boolean} $apply - it will work only if $apply is true
+ */
+.home .bl__page-heading h3 {
+  line-height: 1;
+  padding-bottom: 2px; }
+
+.home .bl__data-container {
+  box-shadow: 0 0.25rem 0.75rem 0.1rem rgba(0, 0, 0, 0.15); }
+
+.organizations .bl__page-heading h3 {
+  line-height: 1;
+  padding-bottom: 2px; }
+
+.organizations .bl__data-container {
+  box-shadow: 0 0.25rem 0.75rem 0.1rem rgba(0, 0, 0, 0.15); }
+
+/*# sourceMappingURL=site.css.map */
