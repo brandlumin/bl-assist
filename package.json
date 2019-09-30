@@ -1,0 +1,27 @@
+{
+  "name": "BL-ASSIST",
+  "version": "1.0.0",
+  "description": "A Localhost Module. Specifically created for 5DBIM-HelpDesk",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp default"
+  },
+  "keywords": [],
+  "author": "Aparna Rai",
+  "license": "ECL-2.0",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-strip-css-comments": "^2.0.0"
+  },
+  "browserslist": [
+    "last 1 years"
+  ]
+}

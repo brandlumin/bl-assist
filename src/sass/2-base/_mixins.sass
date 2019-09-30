@@ -1,0 +1,42 @@
+/**
+ * THIS IS CUSTOM BOX-SHADOW CREATED ON 'LAYER' MODEL
+ * @type {Boolean} $apply - it will work only if $apply is true
+ */
+@mixin bl_box-shadow($apply:true, $x:0, $y:.75rem, $b:1.25rem, $s:-.25rem, $t:.85, $layer:0)
+  // README: ANY layer beyond 3 will work as zero '0' (i.e. default) IF values are not passed while calling. It will happen like so because default declaration is coming with $layer: 0; therefore, though it will accept the passed layer but it will be compiled with (of course) the default value.
+  @if $layer == 0 // this is, and must remain, same as the default declaration
+    $x: 0
+    $y: .75rem
+    $b: 1.25rem
+    $s: -.25rem
+    $t: .85
+  @else if $layer == 1
+    $x: 0rem
+    $y: .05rem
+    $b: .25rem
+    $s: 0
+    $t: .5
+  @else if $layer == 2
+    $x: 0
+    $y: .1rem
+    $b: .5rem
+    $s: 0
+    $t: .7
+  @else if $layer == 3
+    $x: 0
+    $y: .25rem
+    $b: .75rem
+    $s: 0.1rem
+    $t: .85
+  @if $apply
+    box-shadow: $x $y $b $s transparentize(black,$t)
+
+/**
+ * THIS SETS 'LINE-HEIGHT' OF THE 'ELEMENT' AND ADDS 'BOTTOM-PADDING'
+ * @type {Boolean} $apply - it will work only if $apply is true
+ */
+@mixin bl_lh($apply:true, $el: h1, $lh:1, $pb: 2px)
+  @if $apply
+    & #{$el}
+      line-height: $lh
+      padding-bottom: $pb
