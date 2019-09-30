@@ -30,8 +30,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item text-center text-lg-left" href="organizations.html">Organizations</a>
-              <a class="dropdown-item text-center text-lg-left" href="#">Applied For</a>
-              <a class="dropdown-item text-center text-lg-left" href="#">RequestedFor</a>
+              <!-- <a class="dropdown-item text-center text-lg-left" href="#">Applied For</a> -->
+              <!-- <a class="dropdown-item text-center text-lg-left" href="#">RequestedFor</a> -->
               <!-- <div class="dropdown-divider"></div> -->
             </div>
           </li>
@@ -56,8 +56,31 @@
         <div class="offset-1 col-10 bl__data-container table-responsive p-3 rounded-bottom">
           <form>
             <div class="form-row">
+              <div class="col-md-4 mb-3 well rounded" ><!-- data-date="14-02-2012" data-date-format="dd-mm-yyyy" -->
+                <label for="datepicker">Date</label>
+                <input type="text" class="form-control" size="16" id="datepicker">
+                <div class="invalid-feedback">Please select a valid date.</div>
+                <!-- <span class="add-on"><i class="icon-th"></i></span> -->
+              </div>
+              <div class="offset-md-1 col-md-7 mb-3 well bg-white border-0">
+                <label for="ReqOrg">Organization</label>
+                <div class="input-group">
+                  <select class="form-control" id="reqOrg" aria-label="Organization" aria-describedby="ReqOther">
+                    <option selected>Use this to select</option>
+                    <option value="1">Name One Llc</option>
+                    <option value="2">Name Two Llc</option>
+                    <option value="3">Name Three Llc</option>
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-warning" type="button" id="ReqOther">Other</button>
+                  </div>
+                  <div class="invalid-feedback">Please select a valid Organization or OTHER.</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
               <div class="col-md-4 mb-3">
-                <label for="ReqName">First name</label>
+                <label for="ReqName">Name</label>
                 <input type="text" class="form-control" id="ReqName" placeholder="First name" value="Mark" required>
                 <div class="valid-feedback">
                   Looks good!
@@ -71,10 +94,27 @@
                 </div>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="reqMobile">Email</label>
+                <label for="reqMobile">Mobile</label>
                 <input type="tel" class="form-control" id="reqMobile" placeholder="Mobile" value="" required>
                 <div class="valid-feedback">
                   Looks good!
+                </div>
+              </div>
+            </div>
+            <div class="form-row well mb-3">
+              <div class="offset-2 col-md-2 text-center">Application For</div>
+              <div class="col-md-5">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="reqFor1" name="reqFor1" class="custom-control-input">
+                  <label class="custom-control-label" for="reqFor1">Activation</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="reqFor2" name="reqFor1" class="custom-control-input">
+                  <label class="custom-control-label" for="reqFor2">Reactivation</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="reqFor3" name="reqFor1" class="custom-control-input">
+                  <label class="custom-control-label" for="reqFor3">Deactivation</label>
                 </div>
               </div>
             </div>

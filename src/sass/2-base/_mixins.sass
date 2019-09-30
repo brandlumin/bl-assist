@@ -1,4 +1,4 @@
-/**
+/*
  * THIS IS CUSTOM BOX-SHADOW CREATED ON 'LAYER' MODEL
  * @type {Boolean} $apply - it will work only if $apply is true
  */
@@ -31,7 +31,7 @@
   @if $apply
     box-shadow: $x $y $b $s transparentize(black,$t)
 
-/**
+/*
  * THIS SETS 'LINE-HEIGHT' OF THE 'ELEMENT' AND ADDS 'BOTTOM-PADDING'
  * @type {Boolean} $apply - it will work only if $apply is true
  */
@@ -40,3 +40,14 @@
     & #{$el}
       line-height: $lh
       padding-bottom: $pb
+
+
+/*
+ * THIS CREATES A WELL KIND OF DISPLAY
+ * @type {Boolean} $apply - it will work only if $apply is true
+ */
+@mixin well($apply:true,$py:.5rem,$px:$py*1.75)
+  @if $apply
+    padding: $py $px
+    background-color: #eee
+    border: 1px solid #ddd

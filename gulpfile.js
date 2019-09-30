@@ -20,7 +20,7 @@ var sassOptions = {grid: true};
 
 // JS SECTION // ---------------------------------------
 gulp.task('setSassScripts', function () {
-  return gulp.src(['src/js/jquery-3.4.1.min.js','src/js/popper.min.js','src/js/bootstrap431.min.js'])
+  return gulp.src(['src/js/jquery-3.4.1.min.js','src/js/popper.min.js','src/js/bootstrap431.min.js','src/js/bootstrap-datepicker.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('jQbootstrap431.min.js'))
     .pipe(stripJS({safe: true,
