@@ -49,7 +49,7 @@
     <div class="container-fluid newrequest">
       <div class="row">
         <div class="col-12 bl__page-heading py-2 bg-secondary text-light">
-          <h3 class="text-center text-capitalize mb-0">new requests</h3>
+          <h3 class="text-center text-capitalize mb-0">new request</h3>
         </div>
       </div> <!-- /.row bl__page-heading bl__data-container bl__data-group bl__data-title bl__data-status -->
       <div class="row">
@@ -80,21 +80,21 @@
             </div>
             <div class="form-row">
               <div class="col-md-4 mb-3">
-                <label for="ReqName">Name</label>
-                <input type="text" class="form-control" id="ReqName" placeholder="First name" value="Mark" required>
+                <!-- <label for="ReqName">Name</label> -->
+                <input type="text" class="form-control" id="ReqName" placeholder="Name" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="reqEmail">Email</label>
+                <!-- <label for="reqEmail">Email</label> -->
                 <input type="email" class="form-control" id="reqEmail" placeholder="Email" value="" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="reqMobile">Mobile</label>
+                <!-- <label for="reqMobile">Mobile</label> -->
                 <input type="tel" class="form-control" id="reqMobile" placeholder="Mobile" value="" required>
                 <div class="valid-feedback">
                   Looks good!
@@ -102,57 +102,248 @@
               </div>
             </div>
             <div class="form-row well mb-3">
-              <div class="offset-2 col-md-2 text-center">Application For</div>
+              <div class="offset-2 col-md-2 font-weight-bold text-center">Requested for:</div>
               <div class="col-md-5">
                 <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="reqFor1" name="reqFor1" class="custom-control-input">
-                  <label class="custom-control-label" for="reqFor1">Activation</label>
+                  <!-- 
+                    ** HINT: to find the selected value **
+                    let thisNewReqFor = $("input:radio[name=reqFor]:checked").val(); -->
+                  <input type="radio" id="reqFor1" name="reqFor" class="custom-control-input" value="Creation">
+                  <label class="custom-control-label" for="reqFor1">Creation</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="reqFor2" name="reqFor1" class="custom-control-input">
+                  <input type="radio" id="reqFor2" name="reqFor" class="custom-control-input" value="Reactivation">
                   <label class="custom-control-label" for="reqFor2">Reactivation</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="reqFor3" name="reqFor1" class="custom-control-input">
+                  <input type="radio" id="reqFor3" name="reqFor" class="custom-control-input" value="Deactivation">
                   <label class="custom-control-label" for="reqFor3">Deactivation</label>
                 </div>
               </div>
             </div>
             <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationServer03">City</label>
-                <input type="text" class="form-control" id="validationServer03" placeholder="City" required>
-                <div class="invalid-feedback">
-                  Please provide a valid city.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationServer04">State</label>
-                <input type="text" class="form-control" id="validationServer04" placeholder="State" required>
-                <div class="invalid-feedback">
-                  Please provide a valid state.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationServer05">Zip</label>
-                <input type="text" class="form-control" id="validationServer05" placeholder="Zip" required>
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
+              <div class="col mb-3">
+                <div class="row">
+                  <div class="offset-3 col-6">
+                    <h4>Applied for:</h4>
+                    <table class="table table-striped table-sm">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Segments</th>
+                          <th scope="col" class="text-center">Form</th>
+                          <th scope="col" class="text-center">Verify</th>
+                          <th scope="col" class="text-center">Approve</th>
+                          <th scope="col" class="text-center">Ticket</th>
+                          <th scope="col" class="text-center">Close</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">SAP</th>
+                          <td>
+                            <!-- 
+                              ** HINT: to find the selected value **
+                              let thisNewAppFor = $("[name=sapForm]").prop('checked'); -->
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="sapForm" id="sap1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="sapVerify" id="sap2">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="sapApprove" id="sap3">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="sapTicket" id="sap4">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="sapClose" id="sap5">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Bentley</th>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="bentleyForm" id="bentley1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="bentleyVerify" id="bentley2">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="bentleyApprove" id="bentley3">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="bentleyTicket" id="bentley4">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="bentleyClose" id="bentley5">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Primavera</th>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="pvForm" id="pv1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="pvVerify" id="pv2">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="pvApprove" id="pv3">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="pvTicket" id="pv4">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="pvClose" id="pv5">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Unifier</th>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ufForm" id="uf1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ufVerify" id="uf2">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ufApprove" id="uf3">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ufTicket" id="uf4">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ufClose" id="uf5">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">VPN</th>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="vpnForm" id="vpn1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="vpnVerify" id="vpn2">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="vpnApprove" id="vpn3">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="vpnTicket" id="vpn4">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="vpnClose" id="vpn5">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">RIB</th>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ribForm" id="rib1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ribVerify" id="rib2">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ribApprove" id="rib3">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ribTicket" id="rib4">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="ribClose" id="rib5">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">SAP T-codes</th>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="stcForm" id="stc1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="stcVerify" id="stc2">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="stcApprove" id="stc3">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="stcTicket" id="stc4">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-check text-center">
+                              <input class="form-check-input" type="checkbox" name="stcClose" id="stc5">
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
-                <label class="form-check-label" for="invalidCheck3">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <button class="btn btn-primary float-right" type="submit">Create Request</button>
           </form>
         </div>
       </div> <!-- /.row -->
